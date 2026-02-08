@@ -9,16 +9,16 @@ from collections import defaultdict
 
 
 
-MODEL_PATH = "path/to/weights/best.pt"
-DATA_YAML = "path/to/data.yaml"
-IMAGES_TEST_DIR = "path/to/images/test"
-LABELS_TEST_DIR = "path/to/labels/test"
-OUTPUT_METRICS_TXT = "path/to/output/metrics.txt"
-OUTPUT_IMG_DIR = "path/to/output/visualizations"
+MODEL_PATH = "runs/detect/results/usa/rslt_yolo12s_golden_dataset/exp/weights/best.pt"
+DATA_YAML = "dataset/usa/golden_data/data.yaml"
+IMAGES_TEST_DIR = "dataset/usa/golden_data/images/test"
+LABELS_TEST_DIR = "dataset/usa/golden_data/labels/test"
+OUTPUT_METRICS_TXT = "results/rslt_yolo12s_golden_dataset/metrics.txt"
+OUTPUT_IMG_DIR = "results/rslt_yolo12s_golden_dataset/visualizations"
 
 
 
-NUM_IMAGES = 10
+NUM_IMAGES = 14
 IMAGE_SIZE = 500
 
 os.makedirs(OUTPUT_IMG_DIR, exist_ok=True)

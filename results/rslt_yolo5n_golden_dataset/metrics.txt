@@ -1,0 +1,27 @@
+=== YOLOv10 trained on yolo10 and Evaluated on golden Test Set ===
+mAP@0.5        : 0.8094
+mAP@0.5:0.95   : 0.5253
+Mean Precision : 0.8027
+Mean Recall    : 0.7262
+
+Mean F1-score  : 0.7625
+
+=== Per-class Metrics ===
+school    : Precision=0.803, Recall=0.726, F1-score=0.763, mAP50=0.809, mAP50-95=0.525
+
+=== Full mAP@0.3 Evaluation ===
+mAP@0.3       : 0.7115
+Precision@0.3 : 0.6947
+Recall@0.3    : 0.7857
+
+=== Full mAP@0.75 Evaluation ===
+mAP@0.75      : 0.3944
+Precision@0.75: 0.4632
+Recall@0.75   : 0.5238
+
+=== Custom mAP@[0.5:0.95] Evaluation ===
+mAP@[.5:.95]  : 0.4029
+
+=== Center Distance MSE (Prediction vs Ground Truth) ===
+MSE_center_distance: 9317.53
+RMSE_center_distance: 96.53
