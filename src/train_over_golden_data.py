@@ -2,9 +2,9 @@ from ultralytics import YOLO
 
 # Path to your YAML file
 #DATA_YAML = 'dataset/brazil/fixed_bb_and_manual_data/generated_dataset1/data.yaml'
-DATA_YAML = 'dataset/usa/golden_dataset/data.yaml'
-# Model: YOLO10n
-model = YOLO('yolov10n.pt')
+DATA_YAML = 'dataset/usa/golden_data/data.yaml'
+# Model: YOLO8n
+model = YOLO('yolo12s.pt')
 
 # Training
 results = model.train(
@@ -16,12 +16,12 @@ results = model.train(
     lrf=0.001,
     pretrained=True,
     seed=0,
-    device=[0,1],
-    project='results/usa/rslt_yolo10n_golden_dataset',
+    device=0,
+    project='results/usa/rslt_yolo12s_golden_dataset',
     name='exp',
     save=True,
     plots=True,
-    patience=10,  # early stopping
+    patience=8,  # early stopping
     save_period=20,
     verbose=True
     #translate=0.2,

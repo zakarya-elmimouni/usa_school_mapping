@@ -9,7 +9,7 @@ from PIL import Image
 from samgeo.text_sam import LangSAM
 
 # ---------------- Configuration ----------------
-INPUT_DIR  = "data/usa/school"
+INPUT_DIR  = "usa_school_mapping/data/usa/school"
 OUTPUT_DIR = "dataset/usa/satellite"
 CROP_SIZE  = 400
 

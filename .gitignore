@@ -11,6 +11,7 @@ env/
 *.csv
 *.h5
 *.sqlite
+*.pt
 
 # Logs
 *.log

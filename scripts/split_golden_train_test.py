@@ -5,10 +5,10 @@ from pathlib import Path
 
 # ------------- CONFIGURATION ------------------------------------------------
 BASE_DIR       = Path("dataset/usa/golden_data")
-IMAGE_DIR      = BASE_DIR / "images"
-LABEL_DIR      = BASE_DIR / "labels"
+IMAGE_DIR      = BASE_DIR / "images_samples"
+LABEL_DIR      = BASE_DIR / "labels_samples"
 
-SPLIT_RATIOS   = {"train": 0.65, "val": 0.15, "test": 0.2}
+SPLIT_RATIOS   = {"train": 0.7, "val": 0.1, "test": 0.2}
 USE_COPY       = True   # True = copy files, False = move files
 RANDOM_SEED    = 42     # set None for non-deterministic split
 

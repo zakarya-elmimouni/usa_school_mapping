@@ -5,12 +5,12 @@ import numpy as np
 import random
 
 # Directories (train only)
-IMG_DIR = "dataset/togo/manual_labeled_data/images/train"
-LABEL_DIR = "dataset/togo/manual_labeled_data/labels/train"
+IMG_DIR = "dataset/usa/golden_data/images_samples/val"
+LABEL_DIR = "dataset/usa/golden_data/labels_samples/val"
 IMG_EXT = ".png"
 
 # Parameters
-AUG_PER_IMAGE = 4
+AUG_PER_IMAGE = 3
 IMG_SIZE = 500
 MAX_ROTATION = 15
 MAX_TRANSLATION = 175
