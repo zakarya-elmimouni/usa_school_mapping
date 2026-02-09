@@ -4,7 +4,7 @@ from ultralytics import YOLO
 #DATA_YAML = 'dataset/brazil/fixed_bb_and_manual_data/generated_dataset1/data.yaml'
 DATA_YAML = 'dataset/usa/golden_data/data.yaml'
 # Model: YOLO8n
-model = YOLO('yolo12s.pt')
+model = YOLO('yolo26n.pt')
 
 # Training
 results = model.train(
@@ -17,15 +17,16 @@ results = model.train(
     pretrained=True,
     seed=0,
     device=0,
-    project='results/usa/rslt_yolo12s_golden_dataset',
+    project='results/usa/rslt_yolo26n_golden_dataset_without_aug',
     name='exp',
     save=True,
     plots=True,
-    patience=8,  # early stopping
+    patience=10,  # early stopping
     save_period=20,
-    verbose=True
-    #translate=0.2,
-    #degrees=15,
+    verbose=True,
+    translate=0.3,
+    degrees=15,
+    max_det=1,
     #auto_augment=None
 )
 

@@ -5,8 +5,8 @@ from pathlib import Path
 
 # ------------- CONFIGURATION ------------------------------------------------
 BASE_DIR       = Path("dataset/usa/golden_data")
-IMAGE_DIR      = BASE_DIR / "images_samples"
-LABEL_DIR      = BASE_DIR / "labels_samples"
+IMAGE_DIR      = BASE_DIR / "images"
+LABEL_DIR      = BASE_DIR / "labels"
 
 SPLIT_RATIOS   = {"train": 0.7, "val": 0.1, "test": 0.2}
 USE_COPY       = True   # True = copy files, False = move files
