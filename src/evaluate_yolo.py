@@ -7,14 +7,14 @@ from ultralytics import YOLO
 from pathlib import Path
 from collections import defaultdict
 
-model_name = 'yolo26n'
+model_name = 'yolo8n'
 
-MODEL_PATH = "runs/detect/results/usa/rslt_yolo26n_finetuning_auto_on_golden_best_params/test6/weights/best.pt"
+MODEL_PATH = "runs/detect/results/usa/rslt_yolo8n_finetuning_auto_on_golden_best_params/test4/weights/best.pt"
 DATA_YAML = "dataset/usa/golden_data/data.yaml"
 IMAGES_TEST_DIR = "dataset/usa/golden_data/images/test"
 LABELS_TEST_DIR = "dataset/usa/golden_data/labels/test"
-OUTPUT_METRICS_TXT = "results/rslt_yolo26n_finetuned_model_best_params/test6/metrics.txt"
-OUTPUT_IMG_DIR = "results/rslt_yolo26n_finetuned_model_best_params/test6/visualizations"
+OUTPUT_METRICS_TXT = "results/rslt_yolo8n_finetuned_model_best_params/test4/metrics.txt"
+OUTPUT_IMG_DIR = "results/rslt_yolo8n_finetuned_model_best_params/test4/visualizations"
 
 
 

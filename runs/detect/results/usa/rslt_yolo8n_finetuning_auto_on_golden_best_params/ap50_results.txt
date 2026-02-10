@@ -1,0 +1,4 @@
+AP@50: 0.4435
+Hyperparameters:
+lr0=0.00072, lrf=0.0482, momentum=0.9207, weight_decay=0.00425
+box=7.10, translate=0.29, cls=0.66, dfl=1.41, dropout=0.01, erasing=0.17

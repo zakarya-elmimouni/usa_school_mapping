@@ -19,7 +19,7 @@ from optimizers.ECP import ECP
 
 # === Step 2: Define Objective Function ===
 class YOLOObjective:
-    def __init__(self, log_path="results/usa/ecp_yolo26n_log.csv"): # change as needed
+    def __init__(self, log_path="results/usa/ecp_yolo8n_log.csv"): # change as needed
         self.bounds = np.array([
           [1e-4, 1e-2],     # 0: lr0            (default: 0.001)
           [0.01, 0.1],      # 1: lrf            (default: 0.01)
@@ -53,10 +53,10 @@ class YOLOObjective:
             f"lr{lr0:.1e}_lrf{lrf:.2f}_m{momentum:.2f}_wd{weight_decay:.4f}"
             f"_box{box:.1f}_t{translate:.2f}_cls{cls:.2f}_dfl{dfl:.2f}_dr{dropout:.2f}_erase{erasing:.2f}"
         )
-        save_dir="runs/detect/results/usa/rslt_yolo26n_finetuning_auto_on_golden_best_params" # path to saving directory ( change as needed)
+        save_dir="runs/detect/results/usa/rslt_yolo8n_finetuning_auto_on_golden_best_params" # path to saving directory ( change as needed)
 
         try:
-            model = YOLO("runs/detect/results/usa/rslt_yolo26n_auto_labeling/exp/weights/best.pt") # existing model pretrained on auto_labeled_data
+            model = YOLO("runs/detect/results/usa/rslt_yolo8n_auto_labeling/exp/weights/best.pt") # existing model pretrained on auto_labeled_data
 
             results = model.train(
                 data=DATA_YAML,
@@ -81,7 +81,7 @@ class YOLOObjective:
                 degrees=15,
                 save_period=20,
                 verbose=False,
-                project="results/usa/rslt_yolo26n_finetuning_auto_on_golden_best_params", # path to saving directory ( change as needed)
+                project="results/usa/rslt_yolo8n_finetuning_auto_on_golden_best_params", # path to saving directory ( change as needed)
                 name=exp_name,
             )
 
