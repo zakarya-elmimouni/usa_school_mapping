@@ -7,14 +7,14 @@ from ultralytics import YOLO
 from pathlib import Path
 from collections import defaultdict
 
+model_name = 'yolo26n'
 
-
-MODEL_PATH = "runs/detect/results/usa/rslt_yolo26n_finetune_auto_on_golden/exp/weights/best.pt"
+MODEL_PATH = "runs/detect/results/usa/rslt_yolo26n_finetuning_auto_on_golden_best_params/test6/weights/best.pt"
 DATA_YAML = "dataset/usa/golden_data/data.yaml"
 IMAGES_TEST_DIR = "dataset/usa/golden_data/images/test"
 LABELS_TEST_DIR = "dataset/usa/golden_data/labels/test"
-OUTPUT_METRICS_TXT = "results/rslt_yolo26n_finetuned_model/metrics.txt"
-OUTPUT_IMG_DIR = "results/rslt_yolo26n_finetuned_model/visualizations"
+OUTPUT_METRICS_TXT = "results/rslt_yolo26n_finetuned_model_best_params/test6/metrics.txt"
+OUTPUT_IMG_DIR = "results/rslt_yolo26n_finetuned_model_best_params/test6/visualizations"
 
 
 
@@ -28,7 +28,7 @@ metrics = model.val(split="test", data=DATA_YAML, max_det=1)
 
 # === Save YOLO metrics ===
 with open(OUTPUT_METRICS_TXT, "w") as f:
-    f.write("=== YOLOv10 trained on yolo10 and Evaluated on golden Test Set ===\n")
+    f.write(f"=== YOLO  trained on {model_name} and Evaluated on golden Test Set ===\n")
     f.write(f"mAP@0.5        : {metrics.box.map50:.4f}\n")
     f.write(f"mAP@0.5:0.95   : {metrics.box.map:.4f}\n")
     f.write(f"Mean Precision : {metrics.box.mp:.4f}\n")
