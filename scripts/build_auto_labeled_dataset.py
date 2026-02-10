@@ -5,12 +5,12 @@ import random
 # ------------ CONFIGURATION ------------
 school_img_dir = "dataset/usa/satellite/school"
 school_lbl_dir = "dataset/usa/satellite/school_labels"
-non_school_img_dir = "data/usa/satellite/non_school"
+non_school_img_dir = "data/usa/non_school"
 
 base_output_dir = "dataset/usa/dataset_yolo_auto_labeling"
 img_ext = ".png"
 seed = 42
-max_non_school = 2000  #limit non_school to 1500
+max_non_school = 3000  #limit non_school to 1500
 
 # Split ratios
 split_ratio = {"train": 0.8, "val": 0.15, "test": 0.05}

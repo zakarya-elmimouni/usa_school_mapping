@@ -9,12 +9,12 @@ from collections import defaultdict
 
 
 
-MODEL_PATH = "runs/detect/results/usa/rslt_yolo26n_golden_dataset_without_aug/exp/weights/best.pt"
+MODEL_PATH = "runs/detect/results/usa/rslt_yolo26n_finetune_auto_on_golden/exp/weights/best.pt"
 DATA_YAML = "dataset/usa/golden_data/data.yaml"
 IMAGES_TEST_DIR = "dataset/usa/golden_data/images/test"
 LABELS_TEST_DIR = "dataset/usa/golden_data/labels/test"
-OUTPUT_METRICS_TXT = "results/rslt_yolo26n_golden_dataset_without_aug/metrics.txt"
-OUTPUT_IMG_DIR = "results/rslt_yolo26n_golden_dataset_without_aug/visualizations"
+OUTPUT_METRICS_TXT = "results/rslt_yolo26n_finetuned_model/metrics.txt"
+OUTPUT_IMG_DIR = "results/rslt_yolo26n_finetuned_model/visualizations"
 
 
 

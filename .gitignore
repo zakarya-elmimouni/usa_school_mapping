@@ -3,6 +3,7 @@ __pycache__/
 *.py[cod]
 data/
 dataset/
+ECP/
 # Virtual environments
 venv/
 env/
