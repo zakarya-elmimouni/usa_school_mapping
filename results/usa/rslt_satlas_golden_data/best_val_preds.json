@@ -1,0 +1,1098 @@
+[
+  {
+    "image_path": "dataset/usa/golden_data/images/val/non_school_lat=31.0417021_lon=-84.8810954.png",
+    "boxes": [],
+    "scores": [],
+    "labels": [],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/non_school_lat=33.2899021_lon=-84.4592064.png",
+    "boxes": [],
+    "scores": [],
+    "labels": [],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/non_school_lat=38.7803272_lon=-77.3866408.png",
+    "boxes": [],
+    "scores": [],
+    "labels": [],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/non_school_lat=38.9322661_lon=-88.0225351.png",
+    "boxes": [],
+    "scores": [],
+    "labels": [],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/non_school_lat=39.1018523_lon=-84.5138595.png",
+    "boxes": [],
+    "scores": [],
+    "labels": [],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/non_school_lat=39.143859_lon=-84.5209075.png",
+    "boxes": [],
+    "scores": [],
+    "labels": [],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/non_school_lat=39.4586301_lon=-98.1079172.png",
+    "boxes": [],
+    "scores": [],
+    "labels": [],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/non_school_lat=39.7885172_lon=-89.6479145.png",
+    "boxes": [],
+    "scores": [],
+    "labels": [],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/non_school_lat=39.9455804_lon=-91.4084892.png",
+    "boxes": [],
+    "scores": [],
+    "labels": [],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/non_school_lat=39.9660471_lon=-82.993109.png",
+    "boxes": [],
+    "scores": [],
+    "labels": [],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/non_school_lat=39.9993152_lon=-75.1467782.png",
+    "boxes": [],
+    "scores": [],
+    "labels": [],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/non_school_lat=40.0831557_lon=-88.29606.png",
+    "boxes": [],
+    "scores": [],
+    "labels": [],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/non_school_lat=40.6266907_lon=-75.1907652.png",
+    "boxes": [],
+    "scores": [],
+    "labels": [],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/non_school_lat=40.7978496_lon=-81.9394791.png",
+    "boxes": [],
+    "scores": [],
+    "labels": [],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/non_school_lat=41.1655494_lon=-81.4408119.png",
+    "boxes": [
+      [
+        56.996315002441406,
+        147.77978515625,
+        211.15753173828125,
+        224.44891357421875
+      ]
+    ],
+    "scores": [
+      0.6985621452331543
+    ],
+    "labels": [
+      1
+    ],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/non_school_lat=41.2842577_lon=-72.3530114.png",
+    "boxes": [],
+    "scores": [],
+    "labels": [],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/non_school_lat=41.4234356_lon=-81.4227036.png",
+    "boxes": [],
+    "scores": [],
+    "labels": [],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/non_school_lat=41.4247642_lon=-81.4436977.png",
+    "boxes": [],
+    "scores": [],
+    "labels": [],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/non_school_lat=41.683469_lon=-90.3178261.png",
+    "boxes": [],
+    "scores": [],
+    "labels": [],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/non_school_lat=41.7511538_lon=-87.6037886.png",
+    "boxes": [],
+    "scores": [],
+    "labels": [],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/non_school_lat=41.8788515_lon=-72.9801556.png",
+    "boxes": [
+      [
+        173.81692504882812,
+        168.74261474609375,
+        240.52902221679688,
+        323.275390625
+      ]
+    ],
+    "scores": [
+      0.6444641351699829
+    ],
+    "labels": [
+      1
+    ],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/non_school_lat=42.0993664_lon=-88.2526883.png",
+    "boxes": [],
+    "scores": [],
+    "labels": [],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/non_school_lat=42.1750703_lon=-88.3697721.png",
+    "boxes": [],
+    "scores": [],
+    "labels": [],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=36.44829940795898_lon=-100.5421905517578.png",
+    "boxes": [
+      [
+        166.07049560546875,
+        173.01055908203125,
+        265.66864013671875,
+        238.2080078125
+      ]
+    ],
+    "scores": [
+      0.9993029832839966
+    ],
+    "labels": [
+      1
+    ],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=37.81927108764648_lon=-89.22341918945312.png",
+    "boxes": [
+      [
+        160.49038696289062,
+        112.51527404785156,
+        235.44482421875,
+        269.89642333984375
+      ]
+    ],
+    "scores": [
+      0.9991589784622192
+    ],
+    "labels": [
+      1
+    ],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=38.57695388793945_lon=-89.98207092285156.png",
+    "boxes": [
+      [
+        136.64779663085938,
+        150.7459716796875,
+        275.3313293457031,
+        292.2403564453125
+      ]
+    ],
+    "scores": [
+      0.9997612833976746
+    ],
+    "labels": [
+      1
+    ],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=38.68365859985352_lon=-88.35198974609375.png",
+    "boxes": [
+      [
+        181.9776611328125,
+        96.69572448730469,
+        331.9014892578125,
+        271.71636962890625
+      ]
+    ],
+    "scores": [
+      0.9996662139892578
+    ],
+    "labels": [
+      1
+    ],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=39.72788619995117_lon=-76.03633880615234.png",
+    "boxes": [],
+    "scores": [],
+    "labels": [],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=39.84733581542969_lon=-75.43630981445312.png",
+    "boxes": [],
+    "scores": [],
+    "labels": [],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=39.87032318115234_lon=-75.29118347167969.png",
+    "boxes": [
+      [
+        149.83053588867188,
+        125.23228454589844,
+        264.08544921875,
+        272.4578857421875
+      ]
+    ],
+    "scores": [
+      0.9995833039283752
+    ],
+    "labels": [
+      1
+    ],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=39.91423797607422_lon=-75.1767807006836.png",
+    "boxes": [
+      [
+        175.61312866210938,
+        136.54994201660156,
+        252.72525024414062,
+        214.96421813964844
+      ]
+    ],
+    "scores": [
+      0.9994574189186096
+    ],
+    "labels": [
+      1
+    ],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=39.91484451293945_lon=-75.16352081298828.png",
+    "boxes": [
+      [
+        142.11135864257812,
+        156.17855834960938,
+        249.49591064453125,
+        244.13143920898438
+      ],
+      [
+        155.56845092773438,
+        71.96881103515625,
+        249.50448608398438,
+        258.76190185546875
+      ]
+    ],
+    "scores": [
+      0.9990009665489197,
+      0.6297599673271179
+    ],
+    "labels": [
+      1,
+      1
+    ],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=39.92377471923828_lon=-75.15055084228516.png",
+    "boxes": [
+      [
+        103.72894287109375,
+        127.38969421386719,
+        217.422119140625,
+        253.3445281982422
+      ]
+    ],
+    "scores": [
+      0.9991958737373352
+    ],
+    "labels": [
+      1
+    ],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=39.95218276977539_lon=-75.17766571044922.png",
+    "boxes": [
+      [
+        152.05787658691406,
+        161.92837524414062,
+        257.37261962890625,
+        212.38690185546875
+      ]
+    ],
+    "scores": [
+      0.9462451338768005
+    ],
+    "labels": [
+      1
+    ],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=39.97872543334961_lon=-75.16486358642578.png",
+    "boxes": [
+      [
+        152.1321258544922,
+        142.28968811035156,
+        230.95298767089844,
+        271.052978515625
+      ]
+    ],
+    "scores": [
+      0.9997269511222839
+    ],
+    "labels": [
+      1
+    ],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=40.083740234375_lon=-74.95152282714844.png",
+    "boxes": [
+      [
+        128.985595703125,
+        90.4358139038086,
+        268.5820007324219,
+        288.3518981933594
+      ]
+    ],
+    "scores": [
+      0.9997797608375549
+    ],
+    "labels": [
+      1
+    ],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=40.14142608642578_lon=-87.60557556152344.png",
+    "boxes": [
+      [
+        120.050537109375,
+        41.67817687988281,
+        243.29486083984375,
+        350.338134765625
+      ]
+    ],
+    "scores": [
+      0.9997513890266418
+    ],
+    "labels": [
+      1
+    ],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=40.162330627441406_lon=-74.849609375.png",
+    "boxes": [
+      [
+        75.18714904785156,
+        163.68313598632812,
+        272.319091796875,
+        294.23504638671875
+      ]
+    ],
+    "scores": [
+      0.999363124370575
+    ],
+    "labels": [
+      1
+    ],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=40.22372055053711_lon=-74.87238311767578.png",
+    "boxes": [
+      [
+        141.9871368408203,
+        70.78912353515625,
+        230.3553009033203,
+        130.12680053710938
+      ]
+    ],
+    "scores": [
+      0.997988224029541
+    ],
+    "labels": [
+      1
+    ],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=40.30503463745117_lon=-87.7911376953125.png",
+    "boxes": [
+      [
+        267.3238220214844,
+        180.79164123535156,
+        401.0974426269531,
+        242.94667053222656
+      ],
+      [
+        34.02083969116211,
+        181.1962890625,
+        94.95828247070312,
+        249.67529296875
+      ]
+    ],
+    "scores": [
+      0.9915537238121033,
+      0.5297394394874573
+    ],
+    "labels": [
+      1,
+      1
+    ],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=40.52323532104492_lon=-74.23162841796875.png",
+    "boxes": [
+      [
+        203.04200744628906,
+        165.6568603515625,
+        310.37091064453125,
+        320.67852783203125
+      ]
+    ],
+    "scores": [
+      0.9992256164550781
+    ],
+    "labels": [
+      1
+    ],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=40.55207061767578_lon=-74.19526672363281.png",
+    "boxes": [
+      [
+        117.7305908203125,
+        148.481201171875,
+        232.48416137695312,
+        271.01092529296875
+      ],
+      [
+        276.5545654296875,
+        27.725337982177734,
+        396.07867431640625,
+        147.0371551513672
+      ]
+    ],
+    "scores": [
+      0.9992232322692871,
+      0.9851322770118713
+    ],
+    "labels": [
+      1,
+      1
+    ],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=40.63369369506836_lon=-74.07835388183594.png",
+    "boxes": [
+      [
+        173.4785614013672,
+        175.0118408203125,
+        241.99281311035156,
+        221.75057983398438
+      ]
+    ],
+    "scores": [
+      0.7895533442497253
+    ],
+    "labels": [
+      1
+    ],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=40.63472366333008_lon=-74.08583068847656.png",
+    "boxes": [
+      [
+        118.00531768798828,
+        153.85720825195312,
+        214.54025268554688,
+        242.02947998046875
+      ]
+    ],
+    "scores": [
+      0.9975155591964722
+    ],
+    "labels": [
+      1
+    ],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=40.70947265625_lon=-75.21666717529297.png",
+    "boxes": [
+      [
+        179.6041717529297,
+        150.36468505859375,
+        265.2411804199219,
+        254.341796875
+      ]
+    ],
+    "scores": [
+      0.9997532963752747
+    ],
+    "labels": [
+      1
+    ],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=40.74668884277344_lon=-74.00501251220703.png",
+    "boxes": [],
+    "scores": [],
+    "labels": [],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=40.78596496582031_lon=-73.97405242919922.png",
+    "boxes": [
+      [
+        170.5867156982422,
+        277.4291687011719,
+        272.85113525390625,
+        370.5573425292969
+      ]
+    ],
+    "scores": [
+      0.9992581009864807
+    ],
+    "labels": [
+      1
+    ],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=40.82099151611328_lon=-73.95307159423828.png",
+    "boxes": [
+      [
+        125.36551666259766,
+        117.25892639160156,
+        282.9433288574219,
+        301.73895263671875
+      ]
+    ],
+    "scores": [
+      0.9996339082717896
+    ],
+    "labels": [
+      1
+    ],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=40.83154678344727_lon=-73.9424057006836.png",
+    "boxes": [
+      [
+        161.58172607421875,
+        122.1839599609375,
+        301.2710266113281,
+        244.437744140625
+      ]
+    ],
+    "scores": [
+      0.9970839619636536
+    ],
+    "labels": [
+      1
+    ],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=40.85490036010742_lon=-89.67543029785156.png",
+    "boxes": [
+      [
+        60.459320068359375,
+        98.26148986816406,
+        331.14825439453125,
+        333.92877197265625
+      ]
+    ],
+    "scores": [
+      0.9976627826690674
+    ],
+    "labels": [
+      1
+    ],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=40.923038482666016_lon=-73.89784240722656.png",
+    "boxes": [
+      [
+        132.63780212402344,
+        184.19195556640625,
+        202.29444885253906,
+        254.05001831054688
+      ]
+    ],
+    "scores": [
+      0.9983983635902405
+    ],
+    "labels": [
+      1
+    ],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=40.95051956176758_lon=-73.88616180419922.png",
+    "boxes": [
+      [
+        122.7418212890625,
+        162.49647521972656,
+        213.55712890625,
+        278.17034912109375
+      ],
+      [
+        112.71431732177734,
+        175.1510009765625,
+        307.46295166015625,
+        270.9405822753906
+      ]
+    ],
+    "scores": [
+      0.9993910789489746,
+      0.2672826051712036
+    ],
+    "labels": [
+      1,
+      1
+    ],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=40.95671844482422_lon=-73.68804168701172.png",
+    "boxes": [
+      [
+        171.59185791015625,
+        25.740524291992188,
+        239.93612670898438,
+        182.1949005126953
+      ]
+    ],
+    "scores": [
+      0.9993091821670532
+    ],
+    "labels": [
+      1
+    ],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=41.03679275512695_lon=-73.92217254638672.png",
+    "boxes": [
+      [
+        137.8377685546875,
+        113.73092651367188,
+        271.9704284667969,
+        281.8669738769531
+      ]
+    ],
+    "scores": [
+      0.9998084902763367
+    ],
+    "labels": [
+      1
+    ],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=41.06314468383789_lon=-90.56140899658205.png",
+    "boxes": [
+      [
+        37.87300491333008,
+        198.68153381347656,
+        115.94212341308594,
+        342.27911376953125
+      ],
+      [
+        281.66961669921875,
+        164.1807861328125,
+        351.11419677734375,
+        243.8582763671875
+      ]
+    ],
+    "scores": [
+      0.9974051117897034,
+      0.4113209843635559
+    ],
+    "labels": [
+      1,
+      1
+    ],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=41.101844787597656_lon=-74.09882354736328.png",
+    "boxes": [
+      [
+        152.23448181152344,
+        97.5656967163086,
+        259.38104248046875,
+        213.41119384765625
+      ]
+    ],
+    "scores": [
+      0.999658465385437
+    ],
+    "labels": [
+      1
+    ],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=41.1247673034668_lon=-74.00343322753906.png",
+    "boxes": [
+      [
+        136.20176696777344,
+        34.412208557128906,
+        250.8655242919922,
+        247.11227416992188
+      ]
+    ],
+    "scores": [
+      0.9994637370109558
+    ],
+    "labels": [
+      1
+    ],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=41.14611053466797_lon=-73.68515014648438.png",
+    "boxes": [
+      [
+        120.86965942382812,
+        175.178955078125,
+        232.69723510742188,
+        344.62347412109375
+      ]
+    ],
+    "scores": [
+      0.9991298317909241
+    ],
+    "labels": [
+      1
+    ],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=41.61802673339844_lon=-87.66278076171875.png",
+    "boxes": [
+      [
+        170.13697814941406,
+        188.02978515625,
+        266.5321350097656,
+        235.2711181640625
+      ]
+    ],
+    "scores": [
+      0.9982252717018127
+    ],
+    "labels": [
+      1
+    ],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=41.64850997924805_lon=-88.16606903076172.png",
+    "boxes": [
+      [
+        151.57379150390625,
+        49.73122024536133,
+        283.9654235839844,
+        153.75640869140625
+      ]
+    ],
+    "scores": [
+      0.9968799352645874
+    ],
+    "labels": [
+      1
+    ],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=41.80841445922852_lon=-87.70237731933594.png",
+    "boxes": [],
+    "scores": [],
+    "labels": [],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=41.81266784667969_lon=-89.96398162841797.png",
+    "boxes": [
+      [
+        135.93544006347656,
+        136.34780883789062,
+        260.7829895019531,
+        236.77328491210938
+      ]
+    ],
+    "scores": [
+      0.9992852807044983
+    ],
+    "labels": [
+      1
+    ],
+    "img_size": [
+      400,
+      400
+    ]
+  },
+  {
+    "image_path": "dataset/usa/golden_data/images/val/school_lat=44.04484176635742_lon=-73.4782943725586.png",
+    "boxes": [
+      [
+        123.19335174560547,
+        67.43003845214844,
+        304.7245178222656,
+        300.2423095703125
+      ],
+      [
+        203.09423828125,
+        117.50952911376953,
+        348.1536865234375,
+        318.69921875
+      ]
+    ],
+    "scores": [
+      0.9979776740074158,
+      0.33388766646385193
+    ],
+    "labels": [
+      1,
+      1
+    ],
+    "img_size": [
+      400,
+      400
+    ]
+  }
+]
