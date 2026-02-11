@@ -4,6 +4,7 @@ __pycache__/
 data/
 dataset/
 ECP/
+DINOv3/
 # Virtual environments
 venv/
 env/
