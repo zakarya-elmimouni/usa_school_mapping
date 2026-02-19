@@ -1,4 +1,4 @@
-
+# -*- coding: latin-1 -*-
 # train_satlas_detect_full.py - PREDICTION FIX with Image Validation
 
 import os
@@ -51,7 +51,7 @@ STD = [0.229, 0.224, 0.225]
 SEED = 0
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
-OUT_DIR = "results/usa/rslt_satlas_golden_data"
+OUT_DIR = "results/usa/rslt_satlas_golden_data_small_train"
 os.makedirs(OUT_DIR, exist_ok=True)
 BEST_WEIGHTS = os.path.join(OUT_DIR, "best.pt")
 VAL_PREDS_JSON = os.path.join(OUT_DIR, "best_val_preds.json")
@@ -300,13 +300,16 @@ class YoloDetectDataset(Dataset):
 def collate_fn(batch):
     imgs, targets = list(zip(*batch))
     return torch.stack(imgs, 0), list(targets)
-
+#
 def build_model():
     weights = spm.Weights()
     model = weights.get_pretrained_model(
-        MODEL_ID, fpn=True, head=spm.Head.DETECT, num_categories=NUM_CLASSES + 1
+        MODEL_ID, fpn=True, head=spm.Head.DETECT, num_categories=NUM_CLASSES + 1,device=DEVICE
     )
     return model
+
+
+
 
 @torch.no_grad()
 def predict_dataset(model, loader, device):
