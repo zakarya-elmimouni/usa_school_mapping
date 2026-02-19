@@ -23,7 +23,7 @@ import satlaspretrain_models as spm
 # =========================
 # Config - MODIFIED
 # =========================
-DATA_ROOT = "dataset/usa/golden_data"
+DATA_ROOT = "dataset/usa/dataset_yolo_auto_labeling"
 IMG_DIR_TRAIN = f"{DATA_ROOT}/images/train"
 LBL_DIR_TRAIN = f"{DATA_ROOT}/labels/train"
 IMG_DIR_VAL = f"{DATA_ROOT}/images/val"
@@ -34,11 +34,11 @@ LBL_DIR_TEST = f"{DATA_ROOT}/labels/test"
 MODEL_ID = "Aerial_SwinB_SI"
 NUM_CLASSES = 1
 
-EPOCHS = 40  # Increased epochs
+EPOCHS = 80  # Increased epochs
 BATCH_SIZE = 4
 LR = 2e-4  # Increased learning rate
 WARMUP_EPOCHS = 3
-PATIENCE = 8
+PATIENCE = 10
 WEIGHT_DECAY = 1e-4
 IMG_SIZE = 400
 
@@ -51,7 +51,7 @@ STD = [0.229, 0.224, 0.225]
 SEED = 0
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
-OUT_DIR = "results/usa/rslt_satlas_golden_data_small_train"
+OUT_DIR = "results/usa/rslt_satlas_auto_labeled"
 os.makedirs(OUT_DIR, exist_ok=True)
 BEST_WEIGHTS = os.path.join(OUT_DIR, "best.pt")
 VAL_PREDS_JSON = os.path.join(OUT_DIR, "best_val_preds.json")

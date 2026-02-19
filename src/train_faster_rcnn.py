@@ -12,11 +12,12 @@ from torch.utils.data import Dataset, DataLoader
 import torchvision
 from torchvision.models.detection import fasterrcnn_resnet50_fpn
 from torchvision.models.detection.faster_rcnn import FastRCNNPredictor
+import matplotlib.pyplot as plt
 
 # =========================
 # CONFIG
 # =========================
-DATA_ROOT = "dataset/usa/golden_data"
+DATA_ROOT = "dataset/usa/dataset_yolo_auto_labeling"
 
 IMG_DIR_TRAIN = f"{DATA_ROOT}/images/train"
 LBL_DIR_TRAIN = f"{DATA_ROOT}/labels/train"
@@ -25,8 +26,8 @@ LBL_DIR_VAL   = f"{DATA_ROOT}/labels/val"
 
 
 PATIENCE = 10
-BEST_MODEL_PATH = "results/rslt_faster_rcnn_on_gloden/best_fasterrcnn.pt"
-LOSS_PLOT_PATH = "results/rslt_faster_rcnn_on_gloden/loss_curves.png"
+BEST_MODEL_PATH = "results/rslt_faster_rcnn_on_auto_labeled/best_fasterrcnn.pt"
+LOSS_PLOT_PATH = "results/rslt_faster_rcnn_on_auto_labeled/loss_curves.png"
 
 NUM_CLASSES = 1  # school
 BATCH_SIZE = 4

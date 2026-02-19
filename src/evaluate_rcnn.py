@@ -19,13 +19,13 @@ DATA_ROOT = "dataset/usa/golden_data"
 IMG_DIR_TEST = f"{DATA_ROOT}/images/test"
 LBL_DIR_TEST = f"{DATA_ROOT}/labels/test"
 
-MODEL_PATH = "results/rslt_faster_rcnn_on_golden/best_fasterrcnn.pt"
-OUTPUT_TXT = "results/rslt_faster_rcnn_on_golden/test_metrics.txt"
+MODEL_PATH = "results/rslt_faster_rcnn_on_big_golden/best_fasterrcnn.pt"
+OUTPUT_TXT = "results/rslt_faster_rcnn_on_big_golden/test_metrics.txt"
 
 NUM_CLASSES = 1
 IMG_SIZE = 500
 
-CONF_THRESHOLD = 0.5
+CONF_THRESHOLD = 0.25
 IOU_THRESHOLD = 0.5
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
@@ -222,8 +222,8 @@ def main():
         f.write(f"mAP@0.5: {results['map_50'].item():.6f}\n")
         f.write(f"mAP@[0.5:0.95]: {results['map'].item():.6f}\n\n")
 
-        f.write(f"Precision (IoU=0.5, conf=0.5): {precision:.6f}\n")
-        f.write(f"Recall (IoU=0.5, conf=0.5): {recall:.6f}\n")
+        f.write(f"Precision (IoU={IOU_THRESHOLD}, conf={CONF_THRESHOLD}): {precision:.6f}\n")
+        f.write(f"Recall (IoU={IOU_THRESHOLD}, conf={CONF_THRESHOLD}): {recall:.6f}\n")
         f.write(f"F1-score: {f1:.6f}\n")
 
     print(f"\nMetrics saved in {OUTPUT_TXT}")
