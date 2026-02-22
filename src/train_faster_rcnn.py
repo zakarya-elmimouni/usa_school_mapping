@@ -23,6 +23,9 @@ IMG_DIR_TRAIN = f"{DATA_ROOT}/images/train"
 LBL_DIR_TRAIN = f"{DATA_ROOT}/labels/train"
 IMG_DIR_VAL   = f"{DATA_ROOT}/images/val"
 LBL_DIR_VAL   = f"{DATA_ROOT}/labels/val"
+IMG_DIR_TEST   = f"{DATA_ROOT}/images/test"
+LBL_DIR_TEST   = f"{DATA_ROOT}/labels/test"
+
 
 
 PATIENCE = 10
@@ -67,6 +70,40 @@ def load_yolo_txt(lbl_path, img_w, img_h):
 # =========================
 # Dataset
 # =========================
+
+def clean_dataset(img_dir, lbl_dir):
+    print(f"\nChecking dataset integrity in {img_dir}...")
+    img_paths = glob.glob(os.path.join(img_dir, "*.*"))
+
+    removed = 0
+
+    for img_path in img_paths:
+        try:
+            img = Image.open(img_path)
+            img.verify()  # 
+        except Exception:
+            print(f"Removing corrupted image: {img_path}")
+            
+            # Supprimer image
+            os.remove(img_path)
+
+            # Supprimer label correspondant
+            label_path = os.path.join(
+                lbl_dir,
+                Path(img_path).stem + ".txt"
+            )
+
+            if os.path.exists(label_path):
+                os.remove(label_path)
+                print(f"Removed corresponding label: {label_path}")
+
+            removed += 1
+
+    print(f"Done. Removed {removed} corrupted image-label pairs.")
+
+
+
+
 class YoloDataset(Dataset):
     def __init__(self, img_dir, lbl_dir):
         self.img_paths = sorted(glob.glob(os.path.join(img_dir, "*.*")))
@@ -164,7 +201,11 @@ def save_loss_curves(train_losses, val_losses, path):
 # MAIN
 # =========================
 def main():
-
+    
+    clean_dataset(IMG_DIR_TRAIN, LBL_DIR_TRAIN)
+    clean_dataset(IMG_DIR_VAL, LBL_DIR_VAL)
+    clean_dataset(IMG_DIR_TEST, LBL_DIR_TEST)
+  
     train_ds = YoloDataset(IMG_DIR_TRAIN, LBL_DIR_TRAIN)
     val_ds   = YoloDataset(IMG_DIR_VAL, LBL_DIR_VAL)
 
