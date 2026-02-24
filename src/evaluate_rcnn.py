@@ -19,8 +19,8 @@ DATA_ROOT = "dataset/usa/golden_data"
 IMG_DIR_TEST = f"{DATA_ROOT}/images/test"
 LBL_DIR_TEST = f"{DATA_ROOT}/labels/test"
 
-MODEL_PATH = "results/rslt_faster_rcnn_on_big_golden/best_fasterrcnn.pt"
-OUTPUT_TXT = "results/rslt_faster_rcnn_on_big_golden/test_metrics.txt"
+MODEL_PATH = "results/finetune_faster_rcnn_on_golden/best_finetuned_model.pt"
+OUTPUT_TXT = "results/finetune_faster_rcnn_on_golden/test_metrics.txt"
 
 NUM_CLASSES = 1
 IMG_SIZE = 500
@@ -130,14 +130,20 @@ def compute_pr_f1(model, loader):
             outputs = model(images)
 
             for output, target in zip(outputs, targets):
-
+                
                 pred_boxes = output["boxes"].cpu()
                 pred_scores = output["scores"].cpu()
                 gt_boxes = target["boxes"]
-
+                
                 # confidence filtering
                 keep = pred_scores >= CONF_THRESHOLD
                 pred_boxes = pred_boxes[keep]
+                pred_scores = pred_scores[keep]
+                
+                # ?? IMPORTANT: sort predictions by score (descending)
+                sorted_indices = torch.argsort(pred_scores, descending=True)
+                pred_boxes = pred_boxes[sorted_indices]
+                pred_scores = pred_scores[sorted_indices]
 
                 if len(gt_boxes) == 0 and len(pred_boxes) == 0:
                     continue

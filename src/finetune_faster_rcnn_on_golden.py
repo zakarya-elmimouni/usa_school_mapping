@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 # CONFIG
 # =========================================================
 
-DATA_ROOT = "dataset/usa/golden_dataset"
+DATA_ROOT = "dataset/usa/golden_data"
 
 IMG_DIR_TRAIN = f"{DATA_ROOT}/images/train"
 LBL_DIR_TRAIN = f"{DATA_ROOT}/labels/train"
@@ -33,7 +33,7 @@ BEST_MODEL_PATH = os.path.join(SAVE_DIR, "best_finetuned_model.pt")
 LOSS_PLOT_PATH  = os.path.join(SAVE_DIR, "loss_curves.png")
 
 NUM_CLASSES = 1
-BATCH_SIZE = 4
+BATCH_SIZE = 8
 EPOCHS = 30
 LR = 0.0005  # smaller for finetuning 
 PATIENCE = 8

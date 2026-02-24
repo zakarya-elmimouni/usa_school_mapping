@@ -35,7 +35,7 @@ MODEL_ID = "Aerial_SwinB_SI"
 NUM_CLASSES = 1
 
 EPOCHS = 80  # Increased epochs
-BATCH_SIZE = 4
+BATCH_SIZE = 8
 LR = 2e-4  # Increased learning rate
 WARMUP_EPOCHS = 3
 PATIENCE = 10
