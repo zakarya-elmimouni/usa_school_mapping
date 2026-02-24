@@ -23,7 +23,7 @@ import satlaspretrain_models as spm
 # =========================
 # Config - MODIFIED
 # =========================
-DATA_ROOT = "dataset/usa/golden_data"
+DATA_ROOT = "dataset/usa/dataset_yolo_auto_labeling"
 IMG_DIR_TRAIN = f"{DATA_ROOT}/images/train"
 LBL_DIR_TRAIN = f"{DATA_ROOT}/labels/train"
 IMG_DIR_VAL = f"{DATA_ROOT}/images/val"
@@ -35,7 +35,7 @@ MODEL_ID = "Aerial_SwinB_SI"
 NUM_CLASSES = 1
 
 EPOCHS = 80  # Increased epochs
-BATCH_SIZE = 4
+BATCH_SIZE = 8
 LR = 2e-4  # Increased learning rate
 WARMUP_EPOCHS = 3
 PATIENCE = 10
@@ -43,7 +43,7 @@ WEIGHT_DECAY = 1e-4
 IMG_SIZE = 400
 
 # Confidence threshold for predictions - ADDED
-CONFIDENCE_THRESHOLD = 0.25  # Lower threshold to see more predictions
+CONFIDENCE_THRESHOLD = 0.01  # Lower threshold to see more predictions
 
 MEAN = [0.485, 0.456, 0.406]
 STD = [0.229, 0.224, 0.225]
@@ -51,7 +51,7 @@ STD = [0.229, 0.224, 0.225]
 SEED = 0
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
-OUT_DIR = "results/usa/rslt_test_simple"
+OUT_DIR = "results/usa/reslt_satlas_auto_labeled"
 os.makedirs(OUT_DIR, exist_ok=True)
 BEST_WEIGHTS = os.path.join(OUT_DIR, "best.pt")
 VAL_PREDS_JSON = os.path.join(OUT_DIR, "best_val_preds.json")
@@ -493,7 +493,7 @@ def main():
             
             try:
                 out = model(imgs, processed_targets)
-                print("regarde ca ",out)
+#                print("regarde ca ",out)
                 loss = total_loss_from_model_output(out)
                 
                 if torch.isnan(loss) or torch.isinf(loss):

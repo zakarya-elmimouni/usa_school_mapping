@@ -9,18 +9,19 @@ from collections import defaultdict
 
 model_name = 'yolo8n'
 
-MODEL_PATH = "runs/detect/results/usa/rslt_yolo8n_finetuning_auto_on_golden_best_params/test4/weights/best.pt"
-DATA_YAML = "dataset/usa/golden_data/data.yaml"
-IMAGES_TEST_DIR = "dataset/usa/golden_data/images/test"
-LABELS_TEST_DIR = "dataset/usa/golden_data/labels/test"
-OUTPUT_METRICS_TXT = "results/rslt_yolo8n_finetuned_model_best_params/test4/metrics.txt"
-OUTPUT_IMG_DIR = "results/rslt_yolo8n_finetuned_model_best_params/test4/visualizations"
+MODEL_PATH = "runs/detect/results/usa/rslt_yolo8n_auto_labeling/exp/weights/best.pt"
+DATA_YAML = "dataset/usa/dataset_yolo_auto_labeling/data.yaml"
+IMAGES_TEST_DIR = "dataset/usa/dataset_yolo_auto_labeling/images/test"
+LABELS_TEST_DIR = "dataset/usa/dataset_yolo_auto_labeling/labels/test"
+OUTPUT_METRICS_TXT = "results/rslt_yolo8n_auto_labeling/exp/metrics.txt"
+OUTPUT_IMG_DIR = "results/rslt_yolo8n_auto_labeling/exp/visualizations"
 
 
 
 NUM_IMAGES = 4
 IMAGE_SIZE = 500
 
+os.makedirs("results/rslt_yolo8n_auto_labeling/exp", exist_ok=True)
 os.makedirs(OUTPUT_IMG_DIR, exist_ok=True)
 
 model = YOLO(MODEL_PATH)
