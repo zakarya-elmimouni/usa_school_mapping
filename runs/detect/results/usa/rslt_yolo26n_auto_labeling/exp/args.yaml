@@ -13,7 +13,7 @@ cache: false
 device: '0'
 workers: 8
 project: results/usa/rslt_yolo26n_auto_labeling
-name: exp
+name: exp2
 exist_ok: false
 pretrained: true
 optimizer: auto
@@ -106,4 +106,4 @@ auto_augment: randaugment
 erasing: 0.4
 cfg: null
 tracker: botsort.yaml
-save_dir: /users/eleves-a/2024/zakarya.elmimouni/Desktop/usa_school_mapping/runs/detect/results/usa/rslt_yolo26n_auto_labeling/exp
+save_dir: /users/eleves-a/2024/zakarya.elmimouni/Desktop/usa_school_mapping/runs/detect/results/usa/rslt_yolo26n_auto_labeling/exp2
