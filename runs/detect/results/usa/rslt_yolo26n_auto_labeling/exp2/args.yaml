@@ -1,6 +1,6 @@
 task: detect
 mode: train
-model: yolov8n.pt
+model: yolo26n.pt
 data: dataset/usa/dataset_yolo_auto_labeling/data.yaml
 epochs: 120
 time: null
@@ -12,8 +12,8 @@ save_period: 20
 cache: false
 device: '0'
 workers: 8
-project: results/usa/rslt_yolo8n_auto_labeling
-name: exp
+project: results/usa/rslt_yolo26n_auto_labeling
+name: exp2
 exist_ok: false
 pretrained: true
 optimizer: auto
@@ -71,8 +71,8 @@ simplify: true
 opset: null
 workspace: null
 nms: false
-lr0: 0.001
-lrf: 0.01
+lr0: 0.01
+lrf: 0.001
 momentum: 0.937
 weight_decay: 0.0005
 warmup_epochs: 3.0
@@ -106,4 +106,4 @@ auto_augment: randaugment
 erasing: 0.4
 cfg: null
 tracker: botsort.yaml
-save_dir: /users/eleves-a/2024/zakarya.elmimouni/Desktop/usa_school_mapping/runs/detect/results/usa/rslt_yolo8n_auto_labeling/exp
+save_dir: /users/eleves-a/2024/zakarya.elmimouni/Desktop/usa_school_mapping/runs/detect/results/usa/rslt_yolo26n_auto_labeling/exp2

@@ -4,7 +4,7 @@ from ultralytics import YOLO
 #DATA_YAML = 'dataset/brazil/fixed_bb_and_manual_data/generated_dataset1/data.yaml'
 DATA_YAML = 'dataset/usa/dataset_yolo_auto_labeling/data.yaml'
 # Model: YOLO10n
-model = YOLO('yolo12n.pt')
+model = YOLO('yolov8n.pt')
 
 # Training
 results = model.train(
@@ -12,12 +12,12 @@ results = model.train(
     epochs=120,
     imgsz=500 ,
     batch=64,
-    lr0=0.01,
-    lrf=0.001,
+    lr0=0.001,
+    lrf=0.01,
     pretrained=True,
     seed=0,
     device=0,
-    project='results/usa/rslt_yolo12n_auto_labeling',
+    project='results/usa/rslt_yolo8n_auto_labeling',
     name='exp',
     save=True,
     plots=True,

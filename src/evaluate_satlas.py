@@ -6,9 +6,9 @@ from pathlib import Path
 # =========================
 # CONFIG
 # =========================
-PRED_JSON = "results/usa/rslt_satlas_golden_data_small_train/best_test_preds.json"
-LABEL_DIR = "dataset/usa/golden_data/labels/test"
-OUTPUT_DIR = "results/usa/rslt_satlas_golden_data_small_train/evaluation_satlas"
+PRED_JSON = "results/usa/rslt_satlas_auto_labeled/best_test_preds.json"
+LABEL_DIR = "dataset/usa/dataset_yolo_auto_labeling/labels/test"
+OUTPUT_DIR = "results/usa/rslt_satlas_auto_labeled/evaluation_satlas"
 OUTPUT_FILE = os.path.join(OUTPUT_DIR, "evaluation_metrics.json")
 
 IOU_THRESHOLDS = np.arange(0.5, 1.0, 0.05)
