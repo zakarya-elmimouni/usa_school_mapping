@@ -9,19 +9,19 @@ from collections import defaultdict
 
 model_name = 'yolo26n'
 
-MODEL_PATH = "runs/detect/results/usa/rslt_yolo26n_auto_labeling/exp/weights/best.pt"
+MODEL_PATH = "runs/detect/results/usa/rslt_yolo26n_finetuning_auto_on_golden_best_params/test5/weights/best.pt"
 DATA_YAML = "dataset/usa/golden_data/data.yaml"
 IMAGES_TEST_DIR = "dataset/usa/golden_data/images/test"
 LABELS_TEST_DIR = "dataset/usa/golden_data/labels/test"
-OUTPUT_METRICS_TXT = "results/rslt_yolo26n_auto_labeling/exp/metrics.txt"
-OUTPUT_IMG_DIR = "results/rslt_yolo26n_auto_labeling/exp/visualizations"
+OUTPUT_METRICS_TXT = "results/rslt_yolo26n_finetuning_auto_on_golden_best_params/test5/metrics.txt"
+OUTPUT_IMG_DIR = "results/rslt_yolo26n_finetuning_auto_on_golden_best_params/test5/visualizations"
 
 
 
-NUM_IMAGES = 4
+NUM_IMAGES = 0
 IMAGE_SIZE = 500
 
-os.makedirs("results/rslt_yolo26n_auto_labeling/exp", exist_ok=True)
+os.makedirs("results/rslt_yolo26n_finetuning_auto_on_golden_best_params/test5", exist_ok=True)
 os.makedirs(OUTPUT_IMG_DIR, exist_ok=True)
 
 model = YOLO(MODEL_PATH)

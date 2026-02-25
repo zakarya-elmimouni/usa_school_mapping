@@ -19,8 +19,8 @@ DATA_ROOT = "dataset/usa/golden_data"
 IMG_DIR_TEST = f"{DATA_ROOT}/images/test"
 LBL_DIR_TEST = f"{DATA_ROOT}/labels/test"
 
-MODEL_PATH = "results/finetune_faster_rcnn_on_golden/best_finetuned_model.pt"
-OUTPUT_TXT = "results/finetune_faster_rcnn_on_golden/test_metrics.txt"
+MODEL_PATH = "results/finetuning_rcnn_best_params/best_model_global_1.pt"
+OUTPUT_TXT = "results/finetuning_rcnn_best_params/test_metrics_1.txt"
 
 NUM_CLASSES = 1
 IMG_SIZE = 500
