@@ -28,14 +28,17 @@ LBL_DIR_TEST   = f"{DATA_ROOT}/labels/test"
 
 
 
-PATIENCE = 10
-BEST_MODEL_PATH = "results/rslt_faster_rcnn_on_auto_labeled/best_fasterrcnn.pt"
-LOSS_PLOT_PATH = "results/rslt_faster_rcnn_on_auto_labeled/loss_curves.png"
+PATIENCE = 8
+BEST_MODEL_PATH = "results/rslt_faster_rcnn_on_auto_labeled/best_fasterrcnn_1.pt"
+LOSS_PLOT_PATH = "results/rslt_faster_rcnn_on_auto_labeled/loss_curves_1.png"
 
 NUM_CLASSES = 1  # school
 BATCH_SIZE = 4
-EPOCHS = 40
-LR = 0.005
+EPOCHS = 30
+LR = 0.001
+rpn_nms=0.5
+score_thresh=0.3
+box_nms=0.4
 IMG_SIZE = 500  # tu peux mettre 400 si tu veux matcher Satlas
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
@@ -144,6 +147,9 @@ def get_model():
     model.roi_heads.box_predictor = FastRCNNPredictor(
         in_features, NUM_CLASSES + 1
     )
+    model.rpn.nms_thresh = rpn_nms
+    model.roi_heads.score_thresh = score_thresh
+    model.roi_heads.nms_thresh = box_nms
     return model
 
 # =========================
@@ -216,6 +222,7 @@ def main():
                             shuffle=False, collate_fn=collate_fn)
 
     model = get_model().to(DEVICE)
+    
 
     optimizer = torch.optim.SGD(
         model.parameters(), lr=LR, momentum=0.9, weight_decay=0.0005
@@ -228,7 +235,7 @@ def main():
     val_losses = []
     
     scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
-        optimizer, mode='min', factor=0.5, patience=5
+        optimizer, mode='min', factor=0.5, patience=3
     )
     
     for epoch in range(EPOCHS):

@@ -51,7 +51,7 @@ STD = [0.229, 0.224, 0.225]
 SEED = 0
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
-OUT_DIR = "results/usa/reslt_satlas_auto_labeled"
+OUT_DIR = "results/usa/rslt_satlas_auto_labeled"
 os.makedirs(OUT_DIR, exist_ok=True)
 BEST_WEIGHTS = os.path.join(OUT_DIR, "best.pt")
 VAL_PREDS_JSON = os.path.join(OUT_DIR, "best_val_preds.json")
