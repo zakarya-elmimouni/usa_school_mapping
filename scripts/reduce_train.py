@@ -7,14 +7,14 @@ from pathlib import Path
 # CONFIG
 # =========================
 
-root_directory="dataset/usa/golden_data_small_train/"
+root_directory="dataset/usa/golden_data_smaller_train/"
 IMG_DIR = Path(root_directory+"images/train")
 LBL_DIR = Path(root_directory+"labels/train")
 
 OUTPUT_IMG_DIR = Path(root_directory+"subset/images/train")
 OUTPUT_LBL_DIR = Path(root_directory+"subset/labels/train")
 
-TARGET_TOTAL = 300
+TARGET_TOTAL = 200
 SEED = 42
 
 random.seed(SEED)
