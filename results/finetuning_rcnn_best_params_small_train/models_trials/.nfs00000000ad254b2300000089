@@ -1,0 +1,8 @@
+===== TEST METRICS =====
+
+mAP@0.5: 0.771117
+mAP@[0.5:0.95]: 0.508665
+
+Precision (IoU=0.5, conf=0.25): 0.575000
+Recall (IoU=0.5, conf=0.25): 0.821429
+F1-score: 0.676470

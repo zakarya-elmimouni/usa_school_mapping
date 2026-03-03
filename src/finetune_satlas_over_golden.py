@@ -20,7 +20,7 @@ import satlaspretrain_models as spm
 # =========================
 
 # ---- Golden dataset ----
-DATA_ROOT = "dataset/usa/golden_data"
+DATA_ROOT = "dataset/usa/golden_data_small_train"
 IMG_DIR_TRAIN = f"{DATA_ROOT}/images/train"
 LBL_DIR_TRAIN = f"{DATA_ROOT}/labels/train"
 IMG_DIR_VAL = f"{DATA_ROOT}/images/val"
@@ -44,7 +44,7 @@ IMG_SIZE = 400
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
-OUT_DIR = "results/usa/finetune_satlas_pret_auto_on_golden"
+OUT_DIR = "results/usa/finetune_satlas_pret_auto_on_small_train_golden"
 os.makedirs(OUT_DIR, exist_ok=True)
 BEST_WEIGHTS = os.path.join(OUT_DIR, "best_finetuned.pt")
 

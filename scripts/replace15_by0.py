@@ -2,7 +2,7 @@ from pathlib import Path
 
 # 🔧 CHANGE THIS PATH IF NEEDED
 LABELS_ROOT = Path(
-    "dataset/usa/golden_data/labels"
+    "dataset/usa/golden_data_small/labels"
 )
 
 assert LABELS_ROOT.exists(), f"Path not found: {LABELS_ROOT}"

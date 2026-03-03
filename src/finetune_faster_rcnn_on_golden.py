@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 # CONFIG
 # =========================================================
 
-DATA_ROOT = "dataset/usa/golden_data"
+DATA_ROOT = "dataset/usa/golden_data_small_train"
 
 IMG_DIR_TRAIN = f"{DATA_ROOT}/images/train"
 LBL_DIR_TRAIN = f"{DATA_ROOT}/labels/train"
@@ -26,7 +26,7 @@ LBL_DIR_TEST  = f"{DATA_ROOT}/labels/test"
 
 PRETRAINED_MODEL_PATH = "results/rslt_faster_rcnn_on_auto_labeled/best_fasterrcnn.pt"
 
-SAVE_DIR = "results/finetune_faster_rcnn_on_golden"
+SAVE_DIR = "results/finetune_faster_rcnn_on_small_train_golden"
 os.makedirs(SAVE_DIR, exist_ok=True)
 
 BEST_MODEL_PATH = os.path.join(SAVE_DIR, "best_finetuned_model.pt")

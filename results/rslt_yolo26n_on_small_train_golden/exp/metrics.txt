@@ -1,0 +1,10 @@
+=== YOLO  trained on yolo26n and Evaluated on golden Test Set ===
+mAP@0.5        : 0.6593
+mAP@0.5:0.95   : 0.2540
+Mean Precision : 0.4297
+Mean Recall    : 0.6548
+
+Mean F1-score  : 0.5189
+
+=== Per-class Metrics ===
+school    : Precision=0.430, Recall=0.655, F1-score=0.519, mAP50=0.659, mAP50-95=0.254

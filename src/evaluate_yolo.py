@@ -7,21 +7,21 @@ from ultralytics import YOLO
 from pathlib import Path
 from collections import defaultdict
 
-model_name = 'yolo26n'
+model_name = 'yolo8n'
 
-MODEL_PATH = "runs/detect/results/usa/rslt_yolo26n_finetuning_auto_on_golden_best_params/test5/weights/best.pt"
-DATA_YAML = "dataset/usa/golden_data/data.yaml"
-IMAGES_TEST_DIR = "dataset/usa/golden_data/images/test"
-LABELS_TEST_DIR = "dataset/usa/golden_data/labels/test"
-OUTPUT_METRICS_TXT = "results/rslt_yolo26n_finetuning_auto_on_golden_best_params/test5/metrics.txt"
-OUTPUT_IMG_DIR = "results/rslt_yolo26n_finetuning_auto_on_golden_best_params/test5/visualizations"
+MODEL_PATH = "runs/detect/results/usa/rslt_yolo8n_small_train_finetuning_auto_on_golden_best_params/test8/weights/best.pt"
+DATA_YAML = "dataset/usa/golden_data_small_train/data.yaml"
+IMAGES_TEST_DIR = "dataset/usa/golden_data_small_train/images/test"
+LABELS_TEST_DIR = "dataset/usa/golden_data_small_train/labels/test"
+OUTPUT_METRICS_TXT = "results/rslt_yolo8n_small_train_finetuning_auto_on_golden_best_params/test8/metrics.txt"
+OUTPUT_IMG_DIR = "results/rslt_yolo8n_small_train_finetuning_auto_on_golden_best_params/test8/visualizations"
 
 
 
 NUM_IMAGES = 0
 IMAGE_SIZE = 500
 
-os.makedirs("results/rslt_yolo26n_finetuning_auto_on_golden_best_params/test5", exist_ok=True)
+os.makedirs("results/rslt_yolo8n_small_train_finetuning_auto_on_golden_best_params/test8", exist_ok=True)
 os.makedirs(OUTPUT_IMG_DIR, exist_ok=True)
 
 model = YOLO(MODEL_PATH)

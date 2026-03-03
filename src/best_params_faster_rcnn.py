@@ -24,12 +24,12 @@ from optimizers.ECP import ECP
 # =========================================================
 # CONFIG
 # =========================================================
-DATA_ROOT = "dataset/usa/golden_data"
-PRETRAINED_MODEL_PATH = "results/rslt_faster_rcnn_on_auto_labeled/best_fasterrcnn.pt"
+DATA_ROOT = "dataset/usa/golden_data_small_train"
+PRETRAINED_MODEL_PATH = "results/rslt_faster_rcnn_on_auto_labeled/best_fasterrcnn_1.pt"
 
 IMG_SIZE = 500
 BATCH_SIZE = 4
-EPOCHS = 8  # small for ECP speed
+EPOCHS = 10  # small for ECP speed
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 IMG_DIR_TRAIN = f"{DATA_ROOT}/images/train"
@@ -139,6 +139,63 @@ def compute_precision50(model, loader, score_thresh):
 
     precision = TP / (TP + FP + 1e-6)
     return precision
+    
+def compute_f1_50(model, loader, score_thresh):
+
+    TP, FP, FN = 0, 0, 0
+
+    model.eval()
+
+    with torch.no_grad():
+        for images, targets in loader:
+
+            images = [img.to(DEVICE) for img in images]
+            outputs = model(images)
+
+            for output, target in zip(outputs, targets):
+
+                pred_boxes = output["boxes"].cpu()
+                pred_scores = output["scores"].cpu()
+                gt_boxes = target["boxes"]
+
+                # confidence filtering
+                keep = pred_scores >= score_thresh
+                pred_boxes = pred_boxes[keep]
+                pred_scores = pred_scores[keep]
+
+                # sort by score
+                sorted_idx = torch.argsort(pred_scores, descending=True)
+                pred_boxes = pred_boxes[sorted_idx]
+
+                if len(gt_boxes) == 0:
+                    FP += len(pred_boxes)
+                    continue
+
+                if len(pred_boxes) == 0:
+                    FN += len(gt_boxes)
+                    continue
+
+                ious = box_iou(pred_boxes, gt_boxes)
+                matched_gt = set()
+
+                for i in range(len(pred_boxes)):
+                    max_iou, idx = torch.max(ious[i], dim=0)
+
+                    if max_iou >= IOU_THRESHOLD and idx.item() not in matched_gt:
+                        TP += 1
+                        matched_gt.add(idx.item())
+                    else:
+                        FP += 1
+
+                # ground truths non matches = False Negatives
+                FN += len(gt_boxes) - len(matched_gt)
+
+    precision = TP / (TP + FP + 1e-6)
+    recall = TP / (TP + FN + 1e-6)
+
+    f1 = 2 * precision * recall / (precision + recall + 1e-6)
+
+    return f1
 
 # =========================================================
 # ECP Objective
@@ -157,9 +214,9 @@ class RCNNObjective:
         ])
 
         self.dimensions = self.bounds.shape[0]
-        self.log_path = "results/finetuning_rcnn_best_params/ecp_faster_rcnn_log.csv"
+        self.log_path = "results/finetuning_rcnn_best_params_small_train/ecp_faster_rcnn_small_train_log.csv"
 
-        os.makedirs("results/finetuning_rcnn_best_params/models_trials", exist_ok=True)
+        os.makedirs("results/finetuning_rcnn_best_params_small_train/models_trials", exist_ok=True)
 
         with open(self.log_path, "w", newline="") as f:
             writer = csv.writer(f)
@@ -175,7 +232,7 @@ class RCNNObjective:
                                      shuffle=False, collate_fn=collate_fn)
 
         self.global_best_precision = 0.0
-        self.global_best_model_path = "results/finetuning_rcnn_best_params/best_model_global.pt"
+        self.global_best_model_path = "results/finetuning_rcnn_best_params_small_train/best_model_global.pt"
 
         self.PATIENCE = 3  # early stopping patience
 
@@ -188,7 +245,7 @@ class RCNNObjective:
             f"_rpn{rpn_nms:.2f}_sc{score_thresh:.2f}_nms{box_nms:.2f}"
         )
 
-        trial_model_path = f"results/finetuning_rcnn_best_params/models_trials/{trial_name}.pt"
+        trial_model_path = f"results/finetuning_rcnn_best_params_small_train/models_trials/{trial_name}.pt"
 
         print(f"\n=== Trial: {trial_name} ===")
 
@@ -233,13 +290,15 @@ class RCNNObjective:
                 optimizer.step()
 
             # --- validation ---
-            precision50 = compute_precision50(model, self.val_loader, score_thresh)
+#            precision50 = compute_precision50(model, self.val_loader, score_thresh)
+            F1_50=compute_f1_50(model, self.val_loader, score_thresh)
 
-            print(f"Epoch {epoch+1} - Precision50: {precision50:.4f}")
+#            print(f"Epoch {epoch+1} - Precision50: {precision50:.4f}")
+            print(f"Epoch {epoch+1} - F1_50: {F1_50:.4f}")
 
             # --- check improvement ---
-            if precision50 > best_precision + 1e-5:
-                best_precision = precision50
+            if F1_50 > best_precision + 1e-5:
+                best_precision = F1_50
                 epochs_no_improve = 0
 
                 torch.save(model.state_dict(), trial_model_path)
@@ -274,7 +333,7 @@ if __name__ == "__main__":
 
     objective = RCNNObjective()
 
-    n_evals = 20
+    n_evals = 30
     points, values, epsilons = ECP(objective, n=n_evals)
 
     best_index = np.argmax(values)
@@ -283,4 +342,4 @@ if __name__ == "__main__":
 
     print("\nOptimization Complete")
     print(f"Best hyperparameters: {best_point}")
-    print(f"Best Precision50: {best_precision:.4f}")
+    print(f"Best f1_50: {best_precision:.4f}")

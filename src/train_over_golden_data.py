@@ -2,22 +2,22 @@ from ultralytics import YOLO
 
 # Path to your YAML file
 #DATA_YAML = 'dataset/brazil/fixed_bb_and_manual_data/generated_dataset1/data.yaml'
-DATA_YAML = 'dataset/usa/golden_data/data.yaml'
-# Model: YOLO8n
-model = YOLO('yolo26n.pt')
+DATA_YAML = 'dataset/usa/golden_data_small_train/data.yaml'
+# Model: YOLO10n
+model = YOLO('yolov8n.pt')
 
 # Training
 results = model.train(
     data=DATA_YAML,
-    epochs=120,
+    epochs=50,
     imgsz=500 ,
     batch=64,
-    lr0=0.01,
-    lrf=0.001,
+    lr0=0.001,
+    lrf=0.01,
     pretrained=True,
     seed=0,
     device=0,
-    project='results/usa/rslt_yolo26n_golden_dataset_without_aug',
+    project='results/usa/rslt_yolo8n_on_small_train_golden',
     name='exp',
     save=True,
     plots=True,

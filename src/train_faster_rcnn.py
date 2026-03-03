@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt
 # =========================
 # CONFIG
 # =========================
-DATA_ROOT = "dataset/usa/dataset_yolo_auto_labeling"
+DATA_ROOT = "dataset/usa/golden_data_small_train"
 
 IMG_DIR_TRAIN = f"{DATA_ROOT}/images/train"
 LBL_DIR_TRAIN = f"{DATA_ROOT}/labels/train"
@@ -29,13 +29,15 @@ LBL_DIR_TEST   = f"{DATA_ROOT}/labels/test"
 
 
 PATIENCE = 8
-BEST_MODEL_PATH = "results/rslt_faster_rcnn_on_auto_labeled/best_fasterrcnn_1.pt"
-LOSS_PLOT_PATH = "results/rslt_faster_rcnn_on_auto_labeled/loss_curves_1.png"
+BEST_MODEL_PATH = "results/rslt_faster_rcnn_on_small_train_golden/best_fasterrcnn.pt"
+LOSS_PLOT_PATH =  "results/rslt_faster_rcnn_on_small_train_golden/loss_curves.png"
+
+os.makedirs("results/rslt_faster_rcnn_on_small_train_golden", exist_ok=True)
 
 NUM_CLASSES = 1  # school
 BATCH_SIZE = 4
 EPOCHS = 30
-LR = 0.001
+LR = 0.0005
 rpn_nms=0.5
 score_thresh=0.3
 box_nms=0.4
@@ -235,7 +237,7 @@ def main():
     val_losses = []
     
     scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
-        optimizer, mode='min', factor=0.5, patience=3
+        optimizer, mode='min', factor=0.1, patience=3
     )
     
     for epoch in range(EPOCHS):

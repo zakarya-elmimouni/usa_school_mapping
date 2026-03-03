@@ -28,12 +28,12 @@ IMG_SIZE=400
 MEAN = [0.485, 0.456, 0.406]
 STD = [0.229, 0.224, 0.225]
 
-OUT_DIR = "results/usa/rslt_satlas_auto_labeled"
-BEST_WEIGHTS = os.path.join(OUT_DIR, "best.pt")
+OUT_DIR = "results/usa/finetune_satlas_pret_auto_on_golden"
+BEST_WEIGHTS = os.path.join(OUT_DIR, "best_finetuned.pt")
 DATA_ROOT = "dataset/usa/golden_data"
 IMG_DIR_TEST = f"{DATA_ROOT}/images/test"
 LBL_DIR_TEST = f"{DATA_ROOT}/labels/test"
-TEST_PREDS_JSON = os.path.join(OUT_DIR, "best_test_golden_preds.json")
+TEST_PREDS_JSON = os.path.join(OUT_DIR, "best_test_preds.json")
 
 
 def safe_image_open(img_path):
